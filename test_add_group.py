@@ -28,9 +28,9 @@ class UntitledTestCase(unittest.TestCase):
         wd.find_element_by_link_text("groups").click()
 
     def create_group(self, wd, group):
-        # init_group_creation
+        # init group creation
         wd.find_element_by_name("new").click()
-        # fill_group_form
+        # fill group form
         wd.find_element_by_name("group_name").click()
         wd.find_element_by_name("group_name").clear()
         wd.find_element_by_name("group_name").send_keys(group.name)
@@ -40,7 +40,7 @@ class UntitledTestCase(unittest.TestCase):
         wd.find_element_by_name("group_footer").click()
         wd.find_element_by_name("group_footer").clear()
         wd.find_element_by_name("group_footer").send_keys(group.footer)
-        # submit_group_creation
+        # submit group creation
         wd.find_element_by_name("submit").click()
 
     def return_to_group_page(self, wd):
