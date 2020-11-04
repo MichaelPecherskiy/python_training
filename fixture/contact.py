@@ -50,6 +50,29 @@ class ContactHelper:
         # click to home for verify creation
         wd.find_element_by_link_text("home").click()
 
+    def delete_first_contact(self):
+        wd = self.app.wd
+        self.open_home_page()
+        # select first contact
+        wd.find_element_by_name("selected[]").click()
+        # submit deletion
+        wd.find_element_by_xpath("//input[@value='Delete']").click()
+        wd.switch_to_alert().accept()
+
+    def modified_contact(self):
+        wd = self.app.wd
+        self.open_home_page()
+        # select first contact
+        wd.find_element_by_xpath("//img[@alt='Details']").click()
+        # select modified
+        wd.find_element_by_name("modifiy").click()
+        # input changes
+        wd.find_element_by_name("lastname").click()
+        wd.find_element_by_name("lastname").clear()
+        wd.find_element_by_name("lastname").send_keys("wqeqwrwr")
+        # update
+        wd.find_element_by_xpath("(//input[@name='update'])[2]").click()
+
     def open_home_page(self):
         wd = self.app.wd
         wd.get("http://localhost/addressbook/index.php")
