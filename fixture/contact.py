@@ -1,4 +1,5 @@
 from selenium.webdriver.support.ui import Select
+from model.contact import Contact
 
 
 class ContactHelper:
@@ -10,9 +11,45 @@ class ContactHelper:
         wd = self.app.wd
         wd.find_element_by_link_text("add new").click()
 
-    def create(self, Contact):
+    def create_contact(self):
         wd = self.app.wd
         self.open_add_page()
+        # create contact
+        self.fill_contact(Contact(firstname="qaa", lastname="qaaa", company="qaqaaa", home="qwea",
+        work="qwew", email="qweaw@qa.qa", bday="25", bmonth="December", byear="1999"))
+        # submit create contact
+        wd.find_element_by_xpath("(//input[@name='submit'])[2]").click()
+        # click to home for verify creation
+        wd.find_element_by_link_text("home").click()
+
+    def delete_first_contact(self):
+        wd = self.app.wd
+        self.open_home_page()
+        # select first contact
+        wd.find_element_by_name("selected[]").click()
+        # submit deletion
+        wd.find_element_by_xpath("//input[@value='Delete']").click()
+        wd.switch_to_alert().accept()
+
+    def modified_contact(self):
+        wd = self.app.wd
+        self.open_home_page()
+        # select first contact
+        wd.find_element_by_xpath("//img[@alt='Details']").click()
+        # select modified
+        wd.find_element_by_name("modifiy").click()
+        # input changes
+        self.fill_contact(Contact(firstname="qa", lastname="qa", company="qaqa", home="qwe",
+        work="qwe", email="qwe@qa.qa", bday="26", bmonth="December", byear="1997"))
+        # update
+        wd.find_element_by_xpath("(//input[@name='update'])[2]").click()
+
+    def open_home_page(self):
+        wd = self.app.wd
+        wd.get("http://localhost/addressbook/index.php")
+
+    def fill_contact(self, Contact):
+        wd = self.app.wd
         # fill in firstname
         wd.find_element_by_name("firstname").click()
         wd.find_element_by_name("firstname").clear()
@@ -45,34 +82,3 @@ class ContactHelper:
         wd.find_element_by_name("byear").click()
         wd.find_element_by_name("byear").clear()
         wd.find_element_by_name("byear").send_keys(Contact.byear)
-        # submit create contact
-        wd.find_element_by_xpath("(//input[@name='submit'])[2]").click()
-        # click to home for verify creation
-        wd.find_element_by_link_text("home").click()
-
-    def delete_first_contact(self):
-        wd = self.app.wd
-        self.open_home_page()
-        # select first contact
-        wd.find_element_by_name("selected[]").click()
-        # submit deletion
-        wd.find_element_by_xpath("//input[@value='Delete']").click()
-        wd.switch_to_alert().accept()
-
-    def modified_contact(self):
-        wd = self.app.wd
-        self.open_home_page()
-        # select first contact
-        wd.find_element_by_xpath("//img[@alt='Details']").click()
-        # select modified
-        wd.find_element_by_name("modifiy").click()
-        # input changes
-        wd.find_element_by_name("lastname").click()
-        wd.find_element_by_name("lastname").clear()
-        wd.find_element_by_name("lastname").send_keys("wqeqwrwr")
-        # update
-        wd.find_element_by_xpath("(//input[@name='update'])[2]").click()
-
-    def open_home_page(self):
-        wd = self.app.wd
-        wd.get("http://localhost/addressbook/index.php")
