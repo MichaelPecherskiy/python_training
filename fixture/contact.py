@@ -11,12 +11,11 @@ class ContactHelper:
         wd = self.app.wd
         wd.find_element_by_link_text("add new").click()
 
-    def create_contact(self):
+    def create_contact(self, contact):
         wd = self.app.wd
         self.open_add_page()
         # create contact
-        self.fill_contact(Contact(firstname="qaa", lastname="qaaa", company="qaqaaa", home="qwea",
-        work="qwew", email="qweaw@qa.qa", bday="25", bmonth="December", byear="1999"))
+        self.fill_contact(contact)
         # submit create contact
         wd.find_element_by_xpath("(//input[@name='submit'])[2]").click()
         # click to home for verify creation
@@ -31,7 +30,7 @@ class ContactHelper:
         wd.find_element_by_xpath("//input[@value='Delete']").click()
         wd.switch_to_alert().accept()
 
-    def modified_contact(self):
+    def modified_contact(self, contact):
         wd = self.app.wd
         self.open_home_page()
         # select first contact
@@ -39,8 +38,7 @@ class ContactHelper:
         # select modified
         wd.find_element_by_name("modifiy").click()
         # input changes
-        self.fill_contact(Contact(firstname="qa", lastname="qa", company="qaqa", home="qwe",
-        work="qwe", email="qwe@qa.qa", bday="26", bmonth="December", byear="1997"))
+        self.fill_contact(contact)
         # update
         wd.find_element_by_xpath("(//input[@name='update'])[2]").click()
 

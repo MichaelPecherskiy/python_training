@@ -10,12 +10,12 @@ class GroupHelper:
         wd = self.app.wd
         wd.find_element_by_link_text("groups").click()
 
-    def create(self):
+    def create(self, group):
         wd = self.app.wd
         self.open_groups_page()
         # init group creation
         wd.find_element_by_name("new").click()
-        self.fill_form(Group(name="qweqwe", header="qweqwe", footer="qweqwe"))
+        self.fill_form(group)
         # submit group creation
         wd.find_element_by_name("submit").click()
         self.return_to_group_page()
@@ -29,13 +29,13 @@ class GroupHelper:
         wd.find_element_by_name("delete").click()
         self.return_to_group_page()
 
-    def modified_group(self):
+    def modified_group(self, group):
         wd = self.app.wd
         self.open_groups_page()
         wd.find_element_by_name("selected[]").click()
         wd.find_element_by_xpath("(//input[@name='edit'])[2]").click()
         # input changes
-        self.fill_form(Group(name="wewe", header="wewe", footer="wewe"))
+        self.fill_form(group)
         wd.find_element_by_name("update").click()
         self.return_to_group_page()
 
