@@ -1,4 +1,3 @@
-from selenium.webdriver.support.ui import Select
 
 
 class ContactHelper:
@@ -8,7 +7,8 @@ class ContactHelper:
 
     def open_add_page(self):
         wd = self.app.wd
-        wd.find_element_by_link_text("add new").click()
+        if not (wd.current_url.endswith("/edit.php") and len(wd.find_elements_by_name("submit")) > 0):
+            wd.find_element_by_link_text("add new").click()
 
     def create_contact(self, contact):
         wd = self.app.wd
@@ -19,6 +19,7 @@ class ContactHelper:
         wd.find_element_by_xpath("(//input[@name='submit'])[2]").click()
         # click to home for verify creation
         wd.find_element_by_link_text("home").click()
+        self.open_add_page()
 
     def delete_first_contact(self):
         wd = self.app.wd
@@ -27,6 +28,7 @@ class ContactHelper:
         # submit deletion
         wd.find_element_by_xpath("//input[@value='Delete']").click()
         wd.switch_to_alert().accept()
+        self.open_add_page()
 
     def select_first_contact(self):
         wd = self.app.wd
@@ -42,6 +44,7 @@ class ContactHelper:
         self.fill_contact(contact)
         # update
         wd.find_element_by_xpath("(//input[@name='update'])[2]").click()
+        self.open_add_page()
 
     def select_first_modify(self):
         wd = self.app.wd
@@ -61,7 +64,8 @@ class ContactHelper:
 
     def open_home_page(self):
         wd = self.app.wd
-        wd.get("http://localhost/addressbook/index.php")
+        if not (wd.current_url.endswith("/index.php") and len(wd.find_elements_by_xpath("//input[@value='Send e-Mail']")) > 0):
+            wd.get("http://localhost/addressbook/index.php")
 
     def fill_contact(self, Contact):
         wd = self.app.wd
