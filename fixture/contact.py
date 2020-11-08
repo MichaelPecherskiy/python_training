@@ -1,5 +1,4 @@
 from selenium.webdriver.support.ui import Select
-from model.contact import Contact
 
 
 class ContactHelper:
@@ -79,3 +78,8 @@ class ContactHelper:
             wd.find_element_by_name(field_name).click()
             wd.find_element_by_name(field_name).clear()
             wd.find_element_by_name(field_name).send_keys(text)
+
+    def count(self):
+        wd = self.app.wd
+        self.open_home_page()
+        return len(wd.find_elements_by_name("selected[]"))
