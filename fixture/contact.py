@@ -23,9 +23,16 @@ class ContactHelper:
         self.contact_cash = None
 
     def delete_first_contact(self):
+        self.delete_contact_by_index(0)
+
+    def select_contact_by_index(self, index):
+        wd = self.app.wd
+        wd.find_elements_by_name("selected[]")[index].click()
+
+    def delete_contact_by_index(self, index):
         wd = self.app.wd
         self.open_home_page()
-        wd.find_element_by_name("selected[]").click()
+        self.select_contact_by_index(index)
         # submit deletion
         wd.find_element_by_xpath("//input[@value='Delete']").click()
         wd.switch_to_alert().accept()
@@ -35,6 +42,10 @@ class ContactHelper:
     def select_first_contact(self):
         wd = self.app.wd
         wd.find_element_by_name("selected[]").click()
+
+    def select_first_modify(self, index):
+        wd = self.app.wd
+        wd.find_elements_by_xpath("//img[@alt='Details']")[index].click()
 
     def modified_contact(self, contact):
         wd = self.app.wd
@@ -49,14 +60,17 @@ class ContactHelper:
         self.open_add_page()
         self.contact_cash = None
 
-    def select_first_modify(self):
+    def select_modify_by_index(self, index):
         wd = self.app.wd
-        wd.find_element_by_xpath("//img[@alt='Details']").click()
+        wd.find_elements_by_xpath("//img[@alt='Details']")[index].click()
 
-    def modify_first_contact(self, new_contact_date):
+    def modify_first_contact(self):
+        self.modify_contact_by_index(0)
+
+    def modify_contact_by_index(self, index, new_contact_date):
         wd = self.app.wd
         self.open_home_page()
-        self.select_first_modify()
+        self.select_modify_by_index(index)
         # select button modify
         wd.find_element_by_name("modifiy").click()
         # open modification form
