@@ -20,6 +20,7 @@ class ContactHelper:
         # click to home for verify creation
         wd.find_element_by_link_text("home").click()
         self.open_add_page()
+        self.contact_cash = None
 
     def delete_first_contact(self):
         wd = self.app.wd
@@ -29,6 +30,7 @@ class ContactHelper:
         wd.find_element_by_xpath("//input[@value='Delete']").click()
         wd.switch_to_alert().accept()
         self.open_add_page()
+        self.contact_cash = None
 
     def select_first_contact(self):
         wd = self.app.wd
@@ -45,6 +47,7 @@ class ContactHelper:
         # update
         wd.find_element_by_xpath("(//input[@name='update'])[2]").click()
         self.open_add_page()
+        self.contact_cash = None
 
     def select_first_modify(self):
         wd = self.app.wd
@@ -61,6 +64,7 @@ class ContactHelper:
         # submit modification
         wd.find_element_by_name("update").click()
         self.open_add_page()
+        self.contact_cash = None
 
     def open_home_page(self):
         wd = self.app.wd
@@ -88,14 +92,17 @@ class ContactHelper:
         self.open_home_page()
         return len(wd.find_elements_by_name("selected[]"))
 
+    contact_cash = None
+
     def get_contact_list(self):
-        wd = self.app.wd
-        self.open_home_page()
-        contacts = []
-        for element in wd.find_elements_by_name("entry"):
-            firstname = element.find_elements_by_tag_name("td")
-            text = firstname[2].text
-            text2 = firstname[1].text
-            id = element.find_element_by_name("selected[]").get_attribute("value")
-            contacts.append(Contact(firstname=text, lastname=text2, id=id))
-        return contacts
+        if self.contact_cash is None:
+            wd = self.app.wd
+            self.open_home_page()
+            self.contact_cash = []
+            for element in wd.find_elements_by_name("entry"):
+                firstname = element.find_elements_by_tag_name("td")
+                text = firstname[2].text
+                text2 = firstname[1].text
+                id = element.find_element_by_name("selected[]").get_attribute("value")
+                self.contact_cash.append(Contact(firstname=text, lastname=text2, id=id))
+            return list(self.contact_cash)
