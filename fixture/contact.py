@@ -100,7 +100,6 @@ class ContactHelper:
         self.type_contact("email2", Contact.email2)
         self.type_contact("email3", Contact.email3)
         self.type_contact("address", Contact.address)
-        self.type_contact("address2", Contact.secundaryaddress)
 
     def type_contact(self, field_name, text):
         wd = self.app.wd
@@ -123,8 +122,8 @@ class ContactHelper:
             self.contact_cash = []
             for row in wd.find_elements_by_name("entry"):
                 cells = row.find_elements_by_tag_name("td")
-                lastname = cells[2].text
-                firstname = cells[1].text
+                lastname = cells[1].text
+                firstname = cells[2].text
                 id = cells[0].find_element_by_tag_name("input").get_attribute("value")
                 all_phones = cells[5].text
                 all_emails = cells[4].text

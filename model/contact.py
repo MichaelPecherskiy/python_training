@@ -13,7 +13,6 @@ class Contact:
                  mobilephone=None,
                  secondaryphone=None,
                  address=None,
-                 secundaryaddress=None,
                  email2=None,
                  email3=None,
                  all_phones_from_home_page=None,
