@@ -15,10 +15,23 @@ class Contact:
                  address=None,
                  email2=None,
                  email3=None,
+                 middlename=None,
+                 nickname=None,
+                 title=None,
+                 fax=None,
+                 homepage=None,
+                 address2=None,
+                 notes=None,
                  all_phones_from_home_page=None,
                  all_emails_from_home_page=None,
                  all_address_from_home_page=None):
-
+        self.middlename = middlename
+        self.notes = notes
+        self.address2 = address2
+        self.homepage = homepage
+        self.fax = fax
+        self.title = title
+        self.nickname = nickname
         self.firstname = firstname
         self.lastname = lastname
         self.company = company

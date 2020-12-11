@@ -41,6 +41,25 @@ class ContactHelper:
         self.open_add_page()
         self.contact_cash = None
 
+    def select_contact_by_id(self, id):
+        wd = self.app.wd
+        wd.find_element_by_css_selector("input[value='%s']" % id).click()
+
+    def button_delete(self):
+        wd = self.app.wd
+        wd.find_element_by_xpath("//input[@value='Delete']").click()
+
+    def delete_contact_by_id(self, id):
+        wd = self.app.wd
+        self.open_home_page()
+        self.select_contact_by_id(id)
+        # submit deletion
+        self.button_delete()
+        wd.switch_to_alert().accept()
+        wd.find_element_by_css_selector("div.msgbox")
+        self.open_add_page()
+        self.group_cash = None
+
     def select_first_contact(self):
         wd = self.app.wd
         wd.find_element_by_name("selected[]").click()
