@@ -26,7 +26,7 @@ class DbFixture:
         list = []
         cursor = self.connection.cursor()
         try:
-            cursor.execute("select firstname, middlename, lastname, nickname, company, title, address, home, mobile, work, fax, email, email2, email3, homepage, phone2, address2, notes from addressbook")
+            cursor.execute("select id, firstname, middlename, lastname, nickname, company, title, address, home, mobile, work, fax, email, email2, email3, homepage, phone2, address2, notes from addressbook")
             for row in cursor:
                 (id, firstname, middlename, lastname, nickname, company, title, address, home, mobile, work, fax, email,
                  email2, email3, homepage, phone2, address2, notes) = row
