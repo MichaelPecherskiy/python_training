@@ -1,12 +1,19 @@
 import re
+from model.contact import Contact
 
 
-def test_home_page(app):
-    contact_from_home_page = app.contact.get_contact_list()[0]
-    contact_from_edit_page = app.contact.get_contact_info_from_edit_page(0)
-    assert contact_from_home_page.all_phones_from_home_page == merge_phones_like_on_home_page(contact_from_edit_page)
-    assert contact_from_home_page.all_emails_from_home_page == merge_emails_like_on_home_page(contact_from_edit_page)
-    assert contact_from_home_page.all_address_from_home_page == merge_address_like_on_home_page(contact_from_edit_page)
+def test_contact_db_ui(app, db):
+    ui = app.contact.get_contact_list()
+    print("ui", ui)
+
+    def clean(contact):
+        return Contact(id=contact.id, firstname=contact.firstname.strip(), lastname=contact.lastname.strip(),
+                          address=contact.address.strip(),
+                          all_phones_from_home_page=merge_phones_like_on_home_page(contact),
+                          all_emails_from_home_page=merge_emails_like_on_home_page(contact))
+    db = map(clean, db.get_contact_list())
+    print("db", db)
+    assert sorted(ui, key=Contact.id_or_max) == sorted(db, key=Contact.id_or_max)
 
 
 def clear(s):
