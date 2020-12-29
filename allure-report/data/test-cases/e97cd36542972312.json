@@ -1,0 +1,170 @@
+{
+  "uid" : "e97cd36542972312",
+  "name" : "test_modify_group[None:Group3:Header3:Footer3]",
+  "fullName" : "test.test_modify_group#test_modify_group",
+  "historyId" : "d592da2c402641b96e8f17f61f146f15",
+  "time" : {
+    "start" : 1608999848270,
+    "stop" : 1608999848802,
+    "duration" : 532
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "db",
+    "time" : {
+      "start" : 1608999807500,
+      "stop" : 1608999807518,
+      "duration" : 18
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false,
+    "stepsCount" : 0
+  }, {
+    "name" : "check_ui",
+    "time" : {
+      "start" : 1608999848269,
+      "stop" : 1608999848269,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false,
+    "stepsCount" : 0
+  }, {
+    "name" : "stop",
+    "time" : {
+      "start" : 1608999807518,
+      "stop" : 1608999807518,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false,
+    "stepsCount" : 0
+  }, {
+    "name" : "app",
+    "time" : {
+      "start" : 1608999848241,
+      "stop" : 1608999848269,
+      "duration" : 28
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false,
+    "stepsCount" : 0
+  } ],
+  "afterStages" : [ {
+    "name" : "db::fin",
+    "time" : {
+      "start" : 1608999850549,
+      "stop" : 1608999850550,
+      "duration" : 1
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false,
+    "stepsCount" : 0
+  }, {
+    "name" : "stop::fin",
+    "time" : {
+      "start" : 1608999849928,
+      "stop" : 1608999850549,
+      "duration" : 621
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false,
+    "stepsCount" : 0
+  } ],
+  "labels" : [ {
+    "name" : "parentSuite",
+    "value" : "test"
+  }, {
+    "name" : "suite",
+    "value" : "test_modify_group"
+  }, {
+    "name" : "host",
+    "value" : "DESKTOP-3FUG7NV"
+  }, {
+    "name" : "thread",
+    "value" : "10344-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "test.test_modify_group"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "json_groups",
+    "value" : "None:Group3:Header3:Footer3"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "32623f5d2fd4dd0a",
+      "status" : "passed",
+      "time" : {
+        "start" : 1608999718378,
+        "stop" : 1608999719081,
+        "duration" : 703
+      }
+    }, {
+      "uid" : "5863acf8ac3ab79f",
+      "status" : "passed",
+      "time" : {
+        "start" : 1608999504697,
+        "stop" : 1608999505293,
+        "duration" : 596
+      }
+    }, {
+      "uid" : "f56cd220e7ae8cbf",
+      "status" : "passed",
+      "time" : {
+        "start" : 1608999250651,
+        "stop" : 1608999251243,
+        "duration" : 592
+      }
+    } ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "e97cd36542972312.json",
+  "parameterValues" : [ "None:Group3:Header3:Footer3" ]
+}

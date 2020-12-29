@@ -1,0 +1,170 @@
+{
+  "uid" : "b37437f0ac75f441",
+  "name" : "test_modify_name_data[None:firstname5:email_1@test.te:email_1@test.te]",
+  "fullName" : "test.test_modify_contact#test_modify_name_data",
+  "historyId" : "b57eaaf93fd503f7d914984cc8a53ef0",
+  "time" : {
+    "start" : 1608999844817,
+    "stop" : 1608999846072,
+    "duration" : 1255
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "app",
+    "time" : {
+      "start" : 1608999844469,
+      "stop" : 1608999844816,
+      "duration" : 347
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false,
+    "stepsCount" : 0
+  }, {
+    "name" : "db",
+    "time" : {
+      "start" : 1608999807500,
+      "stop" : 1608999807518,
+      "duration" : 18
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false,
+    "stepsCount" : 0
+  }, {
+    "name" : "stop",
+    "time" : {
+      "start" : 1608999807518,
+      "stop" : 1608999807518,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false,
+    "stepsCount" : 0
+  }, {
+    "name" : "check_ui",
+    "time" : {
+      "start" : 1608999844816,
+      "stop" : 1608999844816,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false,
+    "stepsCount" : 0
+  } ],
+  "afterStages" : [ {
+    "name" : "db::fin",
+    "time" : {
+      "start" : 1608999850549,
+      "stop" : 1608999850550,
+      "duration" : 1
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false,
+    "stepsCount" : 0
+  }, {
+    "name" : "stop::fin",
+    "time" : {
+      "start" : 1608999849928,
+      "stop" : 1608999850549,
+      "duration" : 621
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false,
+    "stepsCount" : 0
+  } ],
+  "labels" : [ {
+    "name" : "parentSuite",
+    "value" : "test"
+  }, {
+    "name" : "suite",
+    "value" : "test_modify_contact"
+  }, {
+    "name" : "host",
+    "value" : "DESKTOP-3FUG7NV"
+  }, {
+    "name" : "thread",
+    "value" : "10344-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "test.test_modify_contact"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "json_contacts",
+    "value" : "None:firstname5:email_1@test.te:email_1@test.te"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "8251a1037ca6c1cc",
+      "status" : "passed",
+      "time" : {
+        "start" : 1608999714632,
+        "stop" : 1608999715997,
+        "duration" : 1365
+      }
+    }, {
+      "uid" : "e471fb6a97f8072",
+      "status" : "passed",
+      "time" : {
+        "start" : 1608999501381,
+        "stop" : 1608999502554,
+        "duration" : 1173
+      }
+    }, {
+      "uid" : "57bf7adebc24a23f",
+      "status" : "passed",
+      "time" : {
+        "start" : 1608999247457,
+        "stop" : 1608999248575,
+        "duration" : 1118
+      }
+    } ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "b37437f0ac75f441.json",
+  "parameterValues" : [ "None:firstname5:email_1@test.te:email_1@test.te" ]
+}

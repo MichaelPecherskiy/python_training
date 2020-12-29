@@ -1,0 +1,153 @@
+{
+  "uid" : "b3377a81aa01796e",
+  "name" : "test_contact_list",
+  "fullName" : "test.test_contact_list_db_matches_ui#test_contact_list",
+  "historyId" : "d74c31c31b5e7d9a2cfa56217489d335",
+  "time" : {
+    "start" : 1608999828558,
+    "stop" : 1608999828561,
+    "duration" : 3
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "app",
+    "time" : {
+      "start" : 1608999828522,
+      "stop" : 1608999828557,
+      "duration" : 35
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false,
+    "stepsCount" : 0
+  }, {
+    "name" : "db",
+    "time" : {
+      "start" : 1608999807500,
+      "stop" : 1608999807518,
+      "duration" : 18
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false,
+    "stepsCount" : 0
+  }, {
+    "name" : "stop",
+    "time" : {
+      "start" : 1608999807518,
+      "stop" : 1608999807518,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false,
+    "stepsCount" : 0
+  } ],
+  "afterStages" : [ {
+    "name" : "db::fin",
+    "time" : {
+      "start" : 1608999850549,
+      "stop" : 1608999850550,
+      "duration" : 1
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false,
+    "stepsCount" : 0
+  }, {
+    "name" : "stop::fin",
+    "time" : {
+      "start" : 1608999849928,
+      "stop" : 1608999850549,
+      "duration" : 621
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false,
+    "stepsCount" : 0
+  } ],
+  "labels" : [ {
+    "name" : "parentSuite",
+    "value" : "test"
+  }, {
+    "name" : "suite",
+    "value" : "test_contact_list_db_matches_ui"
+  }, {
+    "name" : "host",
+    "value" : "DESKTOP-3FUG7NV"
+  }, {
+    "name" : "thread",
+    "value" : "10344-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "test.test_contact_list_db_matches_ui"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "f6f6bf28fa019019",
+      "status" : "passed",
+      "time" : {
+        "start" : 1608999698910,
+        "stop" : 1608999698913,
+        "duration" : 3
+      }
+    }, {
+      "uid" : "b52ae65bbef53f31",
+      "status" : "passed",
+      "time" : {
+        "start" : 1608999486635,
+        "stop" : 1608999486638,
+        "duration" : 3
+      }
+    }, {
+      "uid" : "2d5a7e38d70a51f0",
+      "status" : "failed",
+      "statusDetails" : "AssertionError: assert [525:firstname4:None:None] == [522:firstnam...one:None, ...]\n  Right contains 19 more items, first extra item: 523:firstname4:None:None\n  Use -v to get the full diff",
+      "time" : {
+        "start" : 1608999233596,
+        "stop" : 1608999233600,
+        "duration" : 4
+      }
+    } ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "b3377a81aa01796e.json",
+  "parameterValues" : [ ]
+}

@@ -1,0 +1,128 @@
+{
+  "uid" : "2d5a7e38d70a51f0",
+  "name" : "test_contact_list",
+  "fullName" : "test.test_contact_list_db_matches_ui#test_contact_list",
+  "historyId" : "d74c31c31b5e7d9a2cfa56217489d335",
+  "time" : {
+    "start" : 1608999233596,
+    "stop" : 1608999233600,
+    "duration" : 4
+  },
+  "status" : "failed",
+  "statusMessage" : "AssertionError: assert [525:firstname4:None:None] == [522:firstnam...one:None, ...]\n  Right contains 19 more items, first extra item: 523:firstname4:None:None\n  Use -v to get the full diff",
+  "statusTrace" : "app = <fixture.application.Application object at 0x000001F2E09E3E50>, db = <fixture.orm.ORMFixture object at 0x000001F2E0875C40>\n\n    def test_contact_list(app, db):\n        ui_list = app.contact.get_contact_list()\n    \n        def clean(contact):\n            return Contact(id=contact.id, firstname=contact.firstname.strip(), lastname=contact.lastname.strip(), address=contact.address.strip())\n    \n        db_list = map(clean, db.get_contact_list())\n>       assert sorted(ui_list, key=Contact.id_or_max) == sorted(db_list, key=Contact.id_or_max)\nE       assert [525:firstname4:None:None] == [522:firstnam...one:None, ...]\nE         Right contains 19 more items, first extra item: 523:firstname4:None:None\nE         Use -v to get the full diff\n\ntest\\test_contact_list_db_matches_ui.py:10: AssertionError",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "stop",
+    "time" : {
+      "start" : 1608999216853,
+      "stop" : 1608999216853,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false,
+    "stepsCount" : 0
+  }, {
+    "name" : "app",
+    "time" : {
+      "start" : 1608999233573,
+      "stop" : 1608999233596,
+      "duration" : 23
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false,
+    "stepsCount" : 0
+  }, {
+    "name" : "db",
+    "time" : {
+      "start" : 1608999216835,
+      "stop" : 1608999216853,
+      "duration" : 18
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false,
+    "stepsCount" : 0
+  } ],
+  "afterStages" : [ {
+    "name" : "stop::fin",
+    "time" : {
+      "start" : 1608999252456,
+      "stop" : 1608999253094,
+      "duration" : 638
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false,
+    "stepsCount" : 0
+  }, {
+    "name" : "db::fin",
+    "time" : {
+      "start" : 1608999253095,
+      "stop" : 1608999253095,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false,
+    "stepsCount" : 0
+  } ],
+  "labels" : [ {
+    "name" : "parentSuite",
+    "value" : "test"
+  }, {
+    "name" : "suite",
+    "value" : "test_contact_list_db_matches_ui"
+  }, {
+    "name" : "host",
+    "value" : "DESKTOP-3FUG7NV"
+  }, {
+    "name" : "thread",
+    "value" : "15792-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "test.test_contact_list_db_matches_ui"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "2d5a7e38d70a51f0.json",
+  "parameterValues" : [ ]
+}

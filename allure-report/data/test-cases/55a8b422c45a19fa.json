@@ -1,0 +1,128 @@
+{
+  "uid" : "55a8b422c45a19fa",
+  "name" : "test_phones_on_home_page",
+  "fullName" : "test.test_contact_phones#test_phones_on_home_page",
+  "historyId" : "afa9793ccfffb33a0c9ac4b27ca17e4b",
+  "time" : {
+    "start" : 1608999233628,
+    "stop" : 1608999234277,
+    "duration" : 649
+  },
+  "status" : "failed",
+  "statusMessage" : "AssertionError: assert '+79999999999...n+79999999999' == ''\n  + +79999999999\n  + +79999999999\n  + +79999999999\n  + +79999999999",
+  "statusTrace" : "app = <fixture.application.Application object at 0x000001F2E09E3E50>\n\n    def test_phones_on_home_page(app):\n        contact_from_home_page = app.contact.get_contact_list()[0]\n        contact_from_edit_page = app.contact.get_contact_info_from_edit_page(0)\n>       assert contact_from_home_page.all_phones_from_home_page == merge_phones_like_on_home_page(contact_from_edit_page)\nE       AssertionError: assert '+79999999999...n+79999999999' == ''\nE         + +79999999999\nE         + +79999999999\nE         + +79999999999\nE         + +79999999999\n\ntest\\test_contact_phones.py:6: AssertionError",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "stop",
+    "time" : {
+      "start" : 1608999216853,
+      "stop" : 1608999216853,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false,
+    "stepsCount" : 0
+  }, {
+    "name" : "db",
+    "time" : {
+      "start" : 1608999216835,
+      "stop" : 1608999216853,
+      "duration" : 18
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false,
+    "stepsCount" : 0
+  }, {
+    "name" : "app",
+    "time" : {
+      "start" : 1608999233606,
+      "stop" : 1608999233628,
+      "duration" : 22
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false,
+    "stepsCount" : 0
+  } ],
+  "afterStages" : [ {
+    "name" : "stop::fin",
+    "time" : {
+      "start" : 1608999252456,
+      "stop" : 1608999253094,
+      "duration" : 638
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false,
+    "stepsCount" : 0
+  }, {
+    "name" : "db::fin",
+    "time" : {
+      "start" : 1608999253095,
+      "stop" : 1608999253095,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false,
+    "stepsCount" : 0
+  } ],
+  "labels" : [ {
+    "name" : "parentSuite",
+    "value" : "test"
+  }, {
+    "name" : "suite",
+    "value" : "test_contact_phones"
+  }, {
+    "name" : "host",
+    "value" : "DESKTOP-3FUG7NV"
+  }, {
+    "name" : "thread",
+    "value" : "15792-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "test.test_contact_phones"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "55a8b422c45a19fa.json",
+  "parameterValues" : [ ]
+}
